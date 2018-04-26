@@ -57,8 +57,6 @@ sub main(){
         $tag->add_frame("TXXX", "" , "", "$providerid/$assetid") ;
     }
 
-    $tag->set_padding_size(1);
-
     open(my $file , '>', $output) or die "Error opening outpout file '$output' $!";
 	print $file $tag->as_string();
     close($file);
